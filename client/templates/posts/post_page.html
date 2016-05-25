@@ -1,0 +1,22 @@
+<template name="postPage">
+    <div class="post-page page">
+        {{> postItem}}
+        <div class="comment-form">
+            <!--agrego la descripcion aqui, asi no aparece en la pagina principal con todos los posts-->
+            <h4>Description</h4>
+            <p>{{description}}</p>
+        </div>
+
+        <ul class="comments">
+            {{#each comments}}
+                {{> commentItem}}
+            {{/each}}
+        </ul>
+
+        {{#if currentUser}}
+            {{> commentSubmit}}
+        {{else}}
+            <p>Please log in to leave a comment.</p>
+        {{/if}}
+    </div>
+</template>
