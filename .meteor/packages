@@ -40,6 +40,9 @@ ejson
 #timestamp
 mrt:moment
 copleykj:livestamp
+
+#alerts
+themeteorchef:bert
 kevohagan:sweetalert
 
 email

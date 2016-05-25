@@ -73,3 +73,21 @@ if (Posts.find().count() === 0) {
         });
     }
 }
+//var jerald021Id = Meteor.users.insert({
+//    //"emails[0].address": 'jerald021@gmail.com',
+//    emails: {address: 'jerald021@gmail.com'},
+//    profile:{ profPicture: '"https://reddit-image-app2.s3-us-west-1.amazonaws.com/img/happy-dog.png"'},
+//    roles: 'user',
+//    username: 'jerald021'
+//});
+//var jerald021 = Meteor.users.findOne(jerald021Id);
+//
+//var jeraldbcnId = Meteor.users.insert({
+//    //"emails[0].address": 'jeraldbcn@gmail.com',
+//    emails: {address: 'jeraldbcn@gmail.com'},
+//    profile:{ profPicture: Meteor.absoluteUrl() + "img/default-user.png"},
+//    //profile:{ profPicture: 'http://localhost:3000/img/default-user.png'},
+//    roles: 'user',
+//    username: 'jeraldbcn'
+//});
+//var jeraldbcn = Meteor.users.findOne(jeraldbcnId);

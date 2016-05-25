@@ -18,11 +18,10 @@ Template.imageUploader.helpers({
 Template.imageUploader.events({'change .uploadFile': function(event, template) {
     event.preventDefault();
     var upload = new Slingshot.Upload("myImageUploads");
-    var timeStamp = Math.floor(Date.now());
     var user = Meteor.user();
     var currentDate = new Date();
 
-    upload.send(document.getElementById('uploadFile').files[0], function (error, downloadUrl) {
+    upload.send(document.getElementById('file-5').files[0], function (error, downloadUrl) {
         uploader.set();
         if (error) {
             console.error('Error uploading');
@@ -33,7 +32,6 @@ Template.imageUploader.events({'change .uploadFile': function(event, template) {
             console.log('uploaded file available here: '+downloadUrl);
             imageDetails.insert({
                 imageurl: downloadUrl,
-                //time: timeStamp,
                 time: currentDate,
                 uploadedBy: currentUserId,
                 username: user.username
