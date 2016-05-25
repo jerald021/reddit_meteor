@@ -16,7 +16,8 @@ Template.postItem.helpers({
         }
     },
     smallAvatar: function () {
-        return Meteor.users.findOne();
+        var user = Meteor.users.findOne({_id: this.userId});
+        return user;
     }
 });
 
