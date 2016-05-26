@@ -7,9 +7,13 @@
                 {{pluralize votes "Vote"}},
                 submitted {{livestamp submitted}} by <img class="imageSmall" src="{{smallAvatar.profile.profPicture}}"/> {{author}},
                 <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
-                {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+                <!--{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}-->
             </p>
         </div>
-        <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+
+            <a href="{{pathFor 'postPage'}}" class="botones-post-list discuss btn btn-default">Discuss</a>
+            {{#if ownPost}}
+                <a href="{{pathFor 'postEdit'}}" class="discuss btn btn-default">Edit</a>
+            {{/if}}
     </div>
 </template>

@@ -1,5 +1,5 @@
 SearchSource.defineSource('packages', function(searchText, options) {
-    var options = {sort: {isoScore: -1}, limit: 20};
+    var options = {sort: {title: -1}, limit: 20};
 
     if(searchText) {
         var regExp = buildRegExp(searchText);
@@ -12,8 +12,6 @@ SearchSource.defineSource('packages', function(searchText, options) {
 });
 
 function buildRegExp(searchText) {
-    // this is a dumb implementation
     var parts = searchText.trim().split(/[ \-\:]+/);
-    var RegExpBusqueda = new RegExp("(" + parts.join('|') + ")", "ig");
-    return RegExpBusqueda;
+    return new RegExp("(" + parts.join('|') + ")", "ig");
 }

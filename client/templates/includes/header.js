@@ -9,3 +9,8 @@ Template.header.helpers({
         return active && 'active';
     }
 });
+//Template.header.events({
+//    'click .cerrar-menu': function() {
+//        $(".fix-cerrar").addClass('collapsed collapse');
+//    }
+//});
