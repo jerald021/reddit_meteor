@@ -1,7 +1,15 @@
 <template name="commentItem">
     <li>
         <h4>
-            <img class="imageSmall" src="{{smallAvatar.profile.profPicture}}"/> <span class="author">{{author}} <span style="font-size:12px">{{livestamp submitted}}</span></span>
+            <p>
+            <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+                <img class="imageSmall" src="{{smallAvatar.profile.profPicture}}"/>
+                <span class="author">{{author}}
+                    <span>{{pluralize votes "Vote"}}</span>
+                    <span style="font-size:12px">{{livestamp submitted}}</span>
+                </span>
+
+            </p>
             <!--<span class="date">on {{submittedText}}</span>-->
         </h4>
         <p>{{body}}</p>

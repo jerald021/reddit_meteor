@@ -39,6 +39,12 @@ Template.imageUploader.events({'change .uploadFile': function(event, template) {
             Meteor.users.update(currentUserId,
                 {$set:{"profile.profPicture": downloadUrl}}
             );
+            Bert.alert({
+                title: 'Image successfully uploaded',
+                type: 'success',
+                style: 'fixed-top',
+                icon: 'fa-check'
+            });
         }
     });
     uploader.set(upload);
