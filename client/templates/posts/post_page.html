@@ -7,16 +7,23 @@
             <p>{{description}}</p>
         </div>
 
-        <ul class="comments">
-            {{#each comments}}
-                {{> commentItem}}
-            {{/each}}
-        </ul>
-
         {{#if currentUser}}
             {{> commentSubmit}}
         {{else}}
             <p>Please log in to leave a comment.</p>
         {{/if}}
+
+        <div>
+            Sorted by:
+            <button id="sort-date">Date</button>
+            <button id="sort-vote">Votes</button>
+        </div>
+        <br>
+
+        <ul class="comments">
+            {{#each comments}}
+                {{> commentItem}}
+            {{/each}}
+        </ul>
     </div>
 </template>
