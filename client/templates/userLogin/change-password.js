@@ -12,12 +12,19 @@ Template.changePassword.events({
             if (pwd === pwd2) {
                 return pwd.length >= 6 ? true : false; //comprobar si es mayor o igual a 6 caracteres, si lo es devuelve true
             } else {
-                return swal({
+                return Bert.alert({
                     title: "Passwords don’t match",
-                    text: "Please try again",
-                    showConfirmButton: true,
-                    type: "error"
+                    message: "Please try again",
+                    type: 'danger',
+                    style: 'growl-top-right',
+                    icon: 'fa-warning'
                 });
+                //return swal({
+                //    title: "Passwords don’t match",
+                //    text: "Please try again",
+                //    showConfirmButton: true,
+                //    type: "error"
+                //});
             }
         };
         //var digest = Package.sha.SHA256+currentPassword;
@@ -33,13 +40,20 @@ Template.changePassword.events({
                     return console.log(error.reason);
                 }
                 else {
-                    swal({
+                    Bert.alert({
                         title: "Password successfully changed",
-                        text: "Please Log In",
-                        showConfirmButton: true,
-                        closeOnConfirm: true,
-                        type: "success"
+                        message: "Please Log In",
+                        type: 'success',
+                        style: 'growl-top-right',
+                        icon: 'fa-check'
                     });
+                    //swal({
+                    //    title: "Password successfully changed",
+                    //    text: "Please Log In",
+                    //    showConfirmButton: true,
+                    //    closeOnConfirm: true,
+                    //    type: "success"
+                    //});
                     Router.go("login");
                 }
             }, function (error) {

@@ -16,7 +16,13 @@ Template.postSubmit.events({
 
             // show this result but route anyway
             if (result.postExists)
-                alert('This link has already been posted');
+                Bert.alert({
+                    title: 'This link has already been posted',
+                    type: 'info',
+                    style: 'growl-top-right',
+                    icon: 'fa-info'
+                });
+                //alert('This link has already been posted');
         });
     }
 });

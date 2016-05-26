@@ -13,14 +13,21 @@ Template.register.events({
             if (pwd === pwd2) {
                 return pwd.length >= 6 ? true : false; //comprobar si es mayor o igual a 6 caracteres, si lo es devuelve true
             } else {
-                return swal({
+                return Bert.alert({
                     title: "Passwords don’t match",
-                    text: "Please try again",
-                    showConfirmButton: true,
-                    type: "error"
+                    message: "Please try again",
+                    type: 'danger',
+                    style: 'growl-top-right',
+                    icon: 'fa-warning'
                 });
+                //return swal({
+                //    title: "Passwords don’t match",
+                //    text: "Please try again",
+                //    showConfirmButton: true,
+                //    type: "error"
+                //});
             }
-        }
+        };
 
         if (isValidPassword(password, passwordAgain)) {
             Accounts.createUser({
@@ -32,12 +39,19 @@ Template.register.events({
                     console.log(error.reason); // Output error if registration fails
                 } else {
                     Router.go("home"); // Redirect userLogin if registration succeeds
-                    swal({
+                    return Bert.alert({
                         title: "Please check your email",
-                        text: "to activate your account",
-                        showConfirmButton: true,
-                        type: "warning"
+                        message: "to activate your account",
+                        type: 'warning',
+                        style: 'growl-top-right',
+                        icon: 'fa-info'
                     });
+                    //swal({
+                    //    title: "Please check your email",
+                    //    text: "to activate your account",
+                    //    showConfirmButton: true,
+                    //    type: "warning"
+                    //});
                 }
             });
             //Meteor.call('sendVerificationLink',function(error){

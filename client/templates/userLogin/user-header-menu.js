@@ -19,11 +19,17 @@ Template.userHeaderMenu.events({
         var user = Meteor.user();
 
         if(user.emails[0].verified == true){
-            return swal({
+            return Bert.alert({
                 title: "User email already verified",
-                showConfirmButton: true,
-                type: "info"
+                type: 'warning',
+                style: 'growl-top-right',
+                icon: 'fa-info'
             });
+            //return swal({
+            //    title: "User email already verified",
+            //    showConfirmButton: true,
+            //    type: "info"
+            //});
         }
         else{
             Meteor.call('resendEmail', function(error) {
@@ -31,12 +37,19 @@ Template.userHeaderMenu.events({
                     return alert(error.reason);
                 }
                 else {
-                    return swal({
+                    return Bert.alert({
                         title: "Email sent correctly",
-                        text: "Please check your email",
-                        showConfirmButton: true,
-                        type: "success"
+                        message: "Please check your email",
+                        type: 'info',
+                        style: 'growl-top-right',
+                        icon: 'fa-info'
                     });
+                    //return swal({
+                    //    title: "Email sent correctly",
+                    //    text: "Please check your email",
+                    //    showConfirmButton: true,
+                    //    type: "success"
+                    //});
                 }
             });
         }

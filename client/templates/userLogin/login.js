@@ -9,16 +9,30 @@ Template.login.events({
         Meteor.loginWithPassword(username, password, function (error) {
             if(error){
                 //console.log(error.reason);
-                return swal({
+                //return swal({
+                //    title: "Username or password incorrect",
+                //    text: "Please try again",
+                //    showConfirmButton: true,
+                //    closeOnConfirm: true,
+                //    type: "error"
+                //});
+                return Bert.alert({
                     title: "Username or password incorrect",
-                    text: "Please try again",
-                    showConfirmButton: true,
-                    closeOnConfirm: true,
-                    type: "error"
+                    message: "Please try again",
+                    type: 'danger',
+                    style: 'growl-top-right',
+                    icon: 'fa-warning'
                 });
             }
             else{
+                var user = Meteor.users.findOne({_id: this._id});
                 Router.go('home');
+                Bert.alert({
+                    title: "Welcome",
+                    type: 'success',
+                    style: 'fixed-top',
+                    icon: 'fa-bell'
+                });
               //  alert("Bienvenido "+ email); // cambiar por nombre
             }
         });

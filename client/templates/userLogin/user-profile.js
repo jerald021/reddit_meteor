@@ -19,11 +19,17 @@ Template.userProfile.events({
 
         if(result){
             Router.go('home');
-            swal({
-               title: "Data updated correctly",
-               showConfirmButton: true,
-               type: "success"
+            return Bert.alert({
+                title: "Data updated correctly",
+                type: 'success',
+                style: 'growl-top-right',
+                icon: 'fa-check'
             });
+            //swal({
+            //   title: "Data updated correctly",
+            //   showConfirmButton: true,
+            //   type: "success"
+            //});
         }
    }
 });
