@@ -14,6 +14,12 @@ Template.userHeaderMenu.events({
     'click #logout': function (event) {
         event.preventDefault();
         Meteor.logout();
+        Bert.alert({
+            title: "Bye :(",
+            type: 'success',
+            style: 'fixed-top',
+            icon: 'fa-bell'
+        });
     },
     'click #resend-email': function () {
         var user = Meteor.user();

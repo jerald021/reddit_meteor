@@ -28,7 +28,7 @@ Template.login.events({
                 var user = Meteor.users.findOne({_id: this._id});
                 Router.go('home');
                 Bert.alert({
-                    title: "Welcome",
+                    title: "Welcome :)",
                     type: 'success',
                     style: 'fixed-top',
                     icon: 'fa-bell'

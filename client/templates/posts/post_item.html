@@ -1,6 +1,16 @@
 <template name="postItem">
     <div class="post">
-        <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
+        <div>
+            <a href="#" class="vote btn btn-default {{upVotedClass}}">
+                +
+                <!--<img class="arrow-size" src="img/up-arrow.png"/>-->
+            </a>
+            <a href="#" class="vote btn btn-default {{downVotedClass}}">
+                -
+                <!--<img class="arrow-size" src="img/up-arrow.png"/>-->
+            </a>
+        </div>
+
         <div class="post-content">
             <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
             <p>
@@ -17,3 +27,6 @@
             {{/if}}
     </div>
 </template>
+
+<!--ICONO ARROW-->
+<!--⬆-->

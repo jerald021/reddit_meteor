@@ -23,7 +23,7 @@ Meteor.startup(function() {
 
     //-- Contenido del email
     Accounts.emailTemplates.verifyEmail.text = function(user, url) {
-        return 'Gracias por registrarte.  Por favor haz click en el siguiente enlace para confirmar tu email \r\n' + url;
+        return 'Gracias por registrarte!. Por favor haz click en el siguiente enlace para confirmar tu email \r\n' + url;
     };
 
     //-- Después de crear un usuario se envia un email
