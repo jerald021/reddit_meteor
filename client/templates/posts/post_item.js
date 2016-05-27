@@ -12,9 +12,6 @@ Template.postItem.helpers({
         if (userId && !_.include(this.upVoters, userId)) {
             return 'btn-primary up-votable';
         }
-        //else if (userId && !_.include(this.downVoters, userId) && !_.include(this.upVoters, userId) ) {
-        //        return 'btn-primary down-votable';
-        //}
         else {
             return 'disabled';
         }
@@ -24,9 +21,6 @@ Template.postItem.helpers({
         if (userId && !_.include(this.downVoters, userId)) {
             return 'btn-primary down-votable';
         }
-        //else if (userId && !_.include(this.downVoters, userId) && !_.include(this.upVoters, userId) ) {
-        //    return 'btn-primary up-votable';
-        //}
         else {
             return 'disabled';
         }
@@ -37,12 +31,6 @@ Template.postItem.helpers({
     }
 });
 
-//Template.postItem.events({
-//    'click .upvotable': function(e) {
-//        e.preventDefault();
-//        Meteor.call('upvote', this._id);
-//    }
-//});
 Template.postItem.events({
     'click .up-votable': function(e) {
         e.preventDefault();
