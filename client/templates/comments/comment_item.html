@@ -8,8 +8,10 @@
                 <span class="author">{{author}}
                     <span>{{pluralize votes "Vote"}}</span>
                     <span style="font-size:12px">{{livestamp submitted}}</span>
+                    {{#if ownComment}}
+                        <a href="{{pathFor 'commentEdit'}}" class="discuss btn btn-default">Edit</a>
+                    {{/if}}
                 </span>
-
             </p>
         </h4>
         <p>{{body}}</p>

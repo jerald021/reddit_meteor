@@ -77,6 +77,11 @@ body {
     float: right;
     margin-top: 7px; }
 
+.discuss {
+    display: block;
+    float: right;
+    margin-top: 7px; }
+
 .comments {
     list-style-type: none;
     margin: 0; }
@@ -102,14 +107,21 @@ body {
 .load-more {
     display: block;
     border-radius: 3px;
-    background: rgba(0, 0, 0, 0.05);
+    color: white;
+    /*background: rgba(0, 0, 0, 0.05);*/
+    background: #0079d3;
     text-align: center;
+    font-weight: bold;
     height: 60px;
     line-height: 60px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-decoration: none;
+}
 .load-more:hover {
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.1); }
+    color: white;
+    /*background: rgba(0, 0, 0, 0.1); }*/
+    background: #158be2; }
 
 .posts .spinner-container{
     position: relative;

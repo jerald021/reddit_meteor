@@ -20,6 +20,7 @@ Template.userHeaderMenu.events({
             style: 'fixed-top',
             icon: 'fa-bell'
         });
+        Router.go('home');
     },
     'click #resend-email': function () {
         var user = Meteor.user();

@@ -3,6 +3,9 @@ Template.commentItem.helpers({
         var user = Meteor.users.findOne({_id: this.userId});
         return user;
     },
+    ownComment: function() {
+        return this.userId === Meteor.userId();
+    },
     upVotedClass: function() {
         var userId = Meteor.userId();
         if (userId && !_.include(this.upVoters, userId)) {
