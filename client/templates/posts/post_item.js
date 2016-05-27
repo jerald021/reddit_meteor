@@ -34,10 +34,10 @@ Template.postItem.helpers({
 Template.postItem.events({
     'click .up-votable': function(e) {
         e.preventDefault();
-        Meteor.call('vote', this._id, 1);
+        Meteor.call('votePost', this._id, 1);
     },
     'click .down-votable': function(e) {
         e.preventDefault();
-        Meteor.call('vote', this._id, -1);
+        Meteor.call('votePost', this._id, -1);
     }
 });
