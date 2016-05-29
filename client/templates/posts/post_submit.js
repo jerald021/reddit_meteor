@@ -13,6 +13,12 @@ Template.postSubmit.events({
             if (error)
                 return alert(error.reason);
             Router.go('postPage', {_id: result._id});
+            Bert.alert({
+                title: 'Post added successfully',
+                type: 'success',
+                style: 'growl-top-right',
+                icon: 'fa-check'
+            });
 
             // show this result but route anyway
             if (result.postExists)

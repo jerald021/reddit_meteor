@@ -27,11 +27,18 @@ Template.commentSubmit.events({
             return Session.set('commentSubmitErrors', errors);
         }
 
-        Meteor.call('commentInsert', comment, function(error, commentId) {
-            if (error){
+        Meteor.call('commentInsert', comment, function(error) {
+            if (error) {
                 throwError(error.reason);
-            } else {
+            }
+            else {
                 $body.val('');
+                Bert.alert({
+                    title: 'Comment added successfully',
+                    type: 'success',
+                    style: 'growl-top-right',
+                    icon: 'fa-check'
+                });
             }
         });
     }

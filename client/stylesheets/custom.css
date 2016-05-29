@@ -15,7 +15,6 @@
     margin: 0 0 10px 0;
     padding: 0 0 0 0;
 }
-
 #icono-header{
     display:inline-block;
     width: 42px;
@@ -29,4 +28,10 @@
     height: 42px;
     background:url("img/reddit-header-icono-hover.png");
     background-repeat: no-repeat;
+}
+a:hover, a:focus {
+    text-decoration: none !important;
+}
+.navbar{
+    font-size: 15px !important;
 }

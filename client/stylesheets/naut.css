@@ -329,6 +329,7 @@
 
 		 		#header .pagename a {
 		 			display: inline-block;
+					margin: 0 0 0 0.5em;
 		 			line-height: 42px;
 		 			color: #fff;
 		 			font-size: 42px;
@@ -337,13 +338,17 @@
 		 			font-variant: normal;
 		 			text-shadow: 0px 1px 12px rgba(0, 0, 0, 0.2);
 		 		}
+				#header .pagename a:hover {
+					text-decoration: underline !important;
+				}
 
 
 			/* Tabmenu (hot/new/top) */
 			#header-bottom-left {
 				position: absolute;
+				display: inline-block;
 				top: 5em;
-				left: 1em;
+				/*left: 1em;*/
 				/*right: 384px;*/
 			}
 

@@ -25,7 +25,12 @@ Template.searchResult.rendered = function() {
 
 Template.searchBox.events({
     "keyup #search-box": _.throttle(function(e) {
+        e.preventDefault();
         var text = $(e.target).val().trim();
         PackageSearch.search(text);
-    }, 150)
+    }, 150),
+    "submit": function (e) {
+        e.preventDefault();
+        //return false;
+    }
 });
