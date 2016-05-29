@@ -23,7 +23,7 @@ Template.commentItem.helpers({
         else {
             return 'disabled';
         }
-    },
+    }
 });
 
 Template.commentItem.events({

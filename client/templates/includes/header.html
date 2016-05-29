@@ -1,4 +1,14 @@
 <template name="header">
+    <div id="header" role="banner">
+            <div id="header-bottom-left">
+                <a id="header-img" class="default-header" title="" href="{{pathFor 'home'}}">reddit.com</a> <!--IMAGEN LOGO REDDIT DESACTIVADA-->
+                <a id="icono-header" href="{{pathFor 'home'}}"></a>
+                <span class="hover pagename redditname">
+                     <a href="{{pathFor 'home'}}">Reddit</a> <!--TITLE-->
+                 </span>
+            </div>
+    </div>
+
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed fix-cerrar" data-toggle="collapse" data-target="#navigation" aria-expanded="false">

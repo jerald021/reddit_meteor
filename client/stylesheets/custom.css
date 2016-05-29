@@ -6,20 +6,27 @@
     width: 46px;
 }
 
-/*CSS del file uploader verde
-.upload-area .alert {
-    position: relative;
-}
-.upload-area input[type="file"] {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    opacity: 0;
-}*/
-
 .botones-post-list{
     margin-left: 8px;
+}
+.image-reset{
+    height: 196px;
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 0;
+}
+
+#icono-header{
+    display:inline-block;
+    width: 42px;
+    height: 42px;
+    background:url("img/reddit-header-icono-default.png");
+    background-repeat: no-repeat;
+}
+#icono-header:hover{
+    display:inline-block;
+    width: 42px;
+    height: 42px;
+    background:url("img/reddit-header-icono-hover.png");
+    background-repeat: no-repeat;
 }

@@ -90,18 +90,18 @@
 
 		/* Header */
 		#header {
-			margin: 0px;
+			margin: 0 0 10px 0;
 			height: 196px;
 			border: none;
 			background-color: #30333A;
-			background-image: url(%%headerimg%%);
+			background-image: url("img/header-img.jpg");
 			background-repeat: no-repeat;
 			background-position: 50% 50%;
 			background-size: cover;
 			z-index: 1;
 			box-shadow: 0 2px 1.5px 0 rgba(0,0,0,.12),0 0px 4px 0 rgba(0,0,0,.12);
 		}
-
+/*asdasd*/
 			/* Subreddits Bar */
 			#sr-header-area {
 				background-color: rgba(0,0,0,0.08);
@@ -309,12 +309,16 @@
 			#header-img.default-header, #header-img {
 				z-index: 99;
 				width: 0px;
-				padding-left: 42px;
+				/*padding-left: 142px;*/
+				padding-left: 0px;
 				height: 42px;
-				background-image: url(%%spritesheet%%);
+				background-image: url("img/spritesheet.png");
+				/*background-image: url("img/reddit-header-icono-default.png") !important; !*URL image header gif*!*/
 				background-position: -80px -00px;
-				margin: 0 8px 0 0;
+				/*margin: 0 8px 0 0;*/
+				margin: 0 8px 0 60px;
 				vertical-align: top;
+				/*vertical-align: 10px;*/
 				font-size: 0px;
 			}
 

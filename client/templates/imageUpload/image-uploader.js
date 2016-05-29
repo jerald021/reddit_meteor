@@ -36,8 +36,7 @@ Template.imageUploader.events({'change .uploadFile': function(event, template) {
                 uploadedBy: currentUserId,
                 username: user.username
             });
-            // FIX NEEDED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            Meteor.users.update(currentUserId,
+            Meteor.users.update(user._id,
                 {$set:{"profile.profPicture": downloadUrl}}
             );
             Bert.alert({
