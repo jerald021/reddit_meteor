@@ -12,7 +12,8 @@ Accounts.onCreateUser(function (options, user) {
 
     // Basic Profile Picture Setup
     //user.profile.profPicture = "img/default-user.png";
-    user.profile.profPicture = Meteor.absoluteUrl() + "img/default-user.png";
+    //user.profile.profPicture = Meteor.absoluteUrl() + "img/default-user.png";
+    user.profile.profPicture = "https://s3-us-west-1.amazonaws.com/reddit-image-app2/img/default-user.png";
 
     // Returns the userLogin object
     return user;

@@ -4,13 +4,13 @@ if (Posts.find().count() === 0) {
     // create two users
     var tomId = Meteor.users.insert({
         profile: { name: 'Tom Coleman',
-            profPicture: Meteor.absoluteUrl() + "img/default-user.png"
+            profPicture: "https://s3-us-west-1.amazonaws.com/reddit-image-app2/img/default-user.png"
         }
     });
     var tom = Meteor.users.findOne(tomId);
     var sachaId = Meteor.users.insert({
         profile: { name: 'Sacha Greif',
-            profPicture: Meteor.absoluteUrl() + "img/default-user.png"
+            profPicture: "https://s3-us-west-1.amazonaws.com/reddit-image-app2/img/default-user.png"
         }
     });
     var sacha = Meteor.users.findOne(sachaId);

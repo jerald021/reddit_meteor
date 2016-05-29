@@ -342,9 +342,9 @@
 			/* Tabmenu (hot/new/top) */
 			#header-bottom-left {
 				position: absolute;
-				top: 100px;
-				left: 16px;
-				right: 384px;
+				top: 5em;
+				left: 1em;
+				/*right: 384px;*/
 			}
 
 				#header .tabmenu {
