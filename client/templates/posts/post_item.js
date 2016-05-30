@@ -28,7 +28,14 @@ Template.postItem.helpers({
     smallAvatar: function () {
         var user = Meteor.users.findOne({_id: this.userId});
         return user;
+    },
+    currentAuthor: function () {
+        //hacer find en comments
+        var user = Meteor.users.findOne({_id: this.userId});
+        var posts = Posts.find({userId: user});
+        console.log(posts);
     }
+
 });
 
 Template.postItem.events({
@@ -39,5 +46,9 @@ Template.postItem.events({
     'click .down-votable': function(e) {
         e.preventDefault();
         Meteor.call('votePost', this._id, -1);
+    },
+    'click .author': function (e) {
+        //crear nueva ruta /user/username e imprimir los resultados del helper currentAuthor (usar router)
+        e.preventDefault();
     }
 });

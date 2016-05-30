@@ -92,29 +92,33 @@
 /* style 4 */
 
 .inputfile-4 + label {
-    color: #d3394c;
+    color: #0079d3;
 }
 
 .inputfile-4:focus + label,
 .inputfile-4.has-focus + label,
 .inputfile-4 + label:hover {
-    color: #722040;
+    color: #158BE2;
 }
 
 .inputfile-4 + label figure {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #d3394c;
+    background-color: #0079d3;
     display: block;
     padding: 20px;
     margin: 0 auto 10px;
+
 }
 
 .inputfile-4:focus + label figure,
 .inputfile-4.has-focus + label figure,
 .inputfile-4 + label:hover figure {
-    background-color: #722040;
+    background-color: #168ee2;
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
 }
 
 .inputfile-4 + label svg {

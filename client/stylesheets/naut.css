@@ -438,7 +438,7 @@
 
 					.arrow {
 						margin: 0px 0px 0px 0px;
-						background-image: url(%%spritesheet%%) !important;
+						background-image: url("img/spritesheet.png") !important;
 						background-color: transparent;
 						width: 33px;
 						border-radius: 2px;

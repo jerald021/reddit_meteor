@@ -1,3 +1,15 @@
+/* Boton JS subir*/
+#ir-arriba{
+    display:none; /*permite ocultar el boton al cargar la pagina*/
+    position: fixed;
+    padding:20px;
+    background: #222222;
+    cursor:pointer;
+    bottom:20px;
+    right:20px;
+    border-radius: 50px;
+}
+
 .profileImageSize{
     width: 200px;
 }
@@ -34,4 +46,7 @@ a:hover, a:focus {
 }
 .navbar{
     font-size: 15px !important;
+}
+a #icono-header:focus{
+    text-decoration: none;
 }
