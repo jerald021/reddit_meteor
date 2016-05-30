@@ -29,12 +29,12 @@ Template.postItem.helpers({
         var user = Meteor.users.findOne({_id: this.userId});
         return user;
     },
-    currentAuthor: function () {
-        //hacer find en comments
-        var user = Meteor.users.findOne({_id: this.userId});
-        var posts = Posts.find({userId: user});
-        console.log(posts);
-    }
+    //currentAuthor: function () {
+    //    //hacer find en comments
+    //    var user = Meteor.users.findOne({_id: this.userId});
+    //    var posts = Posts.find({userId: user});
+    //    console.log(posts);
+    //}
 
 });
 
@@ -47,8 +47,8 @@ Template.postItem.events({
         e.preventDefault();
         Meteor.call('votePost', this._id, -1);
     },
-    'click .author': function (e) {
-        //crear nueva ruta /user/username e imprimir los resultados del helper currentAuthor (usar router)
-        e.preventDefault();
-    }
+    //'click .author': function (e) {
+    //    //crear nueva ruta /user/username e imprimir los resultados del helper currentAuthor (usar router)
+    //    e.preventDefault();
+    //}
 });

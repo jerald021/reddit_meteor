@@ -1,3 +1,32 @@
+Meteor.publishComposite('users', function (username) {
+        return {
+            find: function () {
+                return Meteor.users.find({username: username},
+                    { limit: 1, fields:
+                    { emails: 1,
+                        profile: 1,
+                        roles: 1,
+                        username: 1
+                    }
+                    }
+                );
+            },
+            children: [
+                {
+                    find: function(user) {
+                        return Posts.find({author: user.username});
+                    }
+                },
+                {
+                    find: function(user) {
+                        return Comments.find({author: user.username});
+                    }
+
+                }
+            ]
+        }
+});
+
 Meteor.publishComposite('posts', {
     find: function(options) {
         //check(options, {
@@ -12,9 +41,10 @@ Meteor.publishComposite('posts', {
                 return Meteor.users.find(
                     { _id: post.userId },
                     { limit: 1, fields:
-                        {profile: 1,
-                         emails: 1,
-                         roles: 1
+                        { emails: 1,
+                          profile: 1,
+                          roles: 1,
+                          username: 1
                         }
                     }
                 );

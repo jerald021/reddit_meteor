@@ -8,7 +8,7 @@
             <p>
                 {{pluralize votes "Vote"}},
                 submitted {{livestamp submitted}} by <img class="imageSmall" src="{{smallAvatar.profile.profPicture}}"/>
-                <a class="author" href="#">{{author}} {{currentAuthor}}</a>,
+                <a class="author" href="{{pathFor 'userFind' username= author}}">{{author}} </a>,
                 <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
                 <!--{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}-->
             </p>
@@ -20,3 +20,4 @@
             {{/if}}
     </div>
 </template>
+<!--asdasd asd asd-->
