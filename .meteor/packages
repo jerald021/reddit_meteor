@@ -56,3 +56,6 @@ reactive-var
 
 #publicar colecciones que esten relacionadas a la vez
 reywood:publish-composite
+
+#monitorizar app
+meteorhacks:kadira
