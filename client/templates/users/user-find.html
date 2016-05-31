@@ -1,6 +1,14 @@
 <template name="userFind">
-    <h1>Esto es el userFind</h1>
-    {{user.username}}
-    {{user.roles}}
-    {{roles}}
+    <h3>Posts created by {{username}}</h3>
+    {{#each post}}
+        {{> postItem}}
+    {{/each}}
+    <hr>
+
+    <h3>Comments by {{username}}</h3>
+    <ul class="comments comments-find">
+    {{#each comment}}
+        {{> commentItemFind}}
+    {{/each}}
+    </ul>
 </template>

@@ -1,4 +1,4 @@
-<template name="commentItem">
+<template name="commentItemFind">
     <li>
         <h4>
             <p>
@@ -8,9 +8,7 @@
                 <span class="author">{{author}}
                     <span>{{pluralize votes "Vote"}}</span>
                     <span style="font-size:12px">{{livestamp submitted}}</span>
-                    <!--{{#if ownComment}}-->
-                        <!--<a href="{{pathFor 'commentEdit'}}" class="discuss btn btn-default">Edit</a>-->
-                    <!--{{/if}}-->
+                        <a href="#" class="findPost botones-post-list discuss btn btn-default {{findPost}}">Go to post</a>
                 </span>
             </p>
         </h4>

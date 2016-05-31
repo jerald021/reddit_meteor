@@ -1,6 +1,10 @@
 Template.userFind.helpers({
-    user: function () {
-        return Meteor.users.findOne();
+    post: function () {
+        var username = Router.current().params.username;
+        return Posts.find({author: username});
+    },
+    comment: function(){
+        var username = Router.current().params.username;
+        return Comments.find({author: username});
     }
-
 });
