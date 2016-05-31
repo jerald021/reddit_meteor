@@ -13,7 +13,7 @@ Template.userProfile.helpers({
 Template.userProfile.events({
    'submit form' : function(event, result){
         event.preventDefault();
-        var username = $('#username').val();
+        //var username = $('#username').val();
         var email = $('#email').val();
         Meteor.call('updateProfile',username, email);
 

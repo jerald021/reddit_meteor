@@ -19,20 +19,27 @@ Meteor.methods({
         }
     },
     updateProfile: function (newUsername, email) {
-        check(newUsername, String);
+        //check(newUsername, String);
         check(email, String);
         var user = Meteor.user();
         //var emaildb = user.emails[0].address;
 
-        if(newUsername != user.username){
-            Meteor.users.update(user._id, {$set: {username: newUsername}});
-            console.log("Username actualizado");
-        }
-        else if(email != user.emails[0].address){
+        if(email != user.emails[0].address){
             Accounts.removeEmail(user._id, user.emails[0].address);
             Accounts.addEmail(user._id, email);
             //Meteor.users.update(user._id, {$set: {address: email}});
             console.log("Email actualizado");
         }
+
+        //if(newUsername != user.username){
+        //    Meteor.users.update(user._id, {$set: {username: newUsername}});
+        //    console.log("Username actualizado");
+        //}
+        //else if(email != user.emails[0].address){
+        //    Accounts.removeEmail(user._id, user.emails[0].address);
+        //    Accounts.addEmail(user._id, email);
+        //    //Meteor.users.update(user._id, {$set: {address: email}});
+        //    console.log("Email actualizado");
+        //}
     }
 });

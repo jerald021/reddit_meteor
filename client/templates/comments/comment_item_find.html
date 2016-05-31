@@ -5,11 +5,10 @@
                 <a href="#" class="vote btn btn-default {{upVotedClass}}">+</a>
                 <a href="#" class="vote btn btn-default {{downVotedClass}}">-</a>
                 <img class="imageSmall" src="{{smallAvatar.profile.profPicture}}"/>
-                <span class="author">{{author}}
+                <a class="author" href="{{pathFor 'userFind' username= author}}">{{author}} </a>
                     <span>{{pluralize votes "Vote"}}</span>
                     <span style="font-size:12px">{{livestamp submitted}}</span>
-                        <a href="#" class="findPost botones-post-list discuss btn btn-default {{findPost}}">Go to post</a>
-                </span>
+                    <a href="#" class="findPost botones-post-list discuss btn btn-default">Go to post</a>
             </p>
         </h4>
         <p>{{body}}</p>

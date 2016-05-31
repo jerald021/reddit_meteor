@@ -5,13 +5,10 @@
                 <a href="#" class="vote btn btn-default {{upVotedClass}}">+</a>
                 <a href="#" class="vote btn btn-default {{downVotedClass}}">-</a>
                 <img class="imageSmall" src="{{smallAvatar.profile.profPicture}}"/>
-                <span class="author">{{author}}
+                <!--<span class="author">{{author}}</span>-->
+                <a class="author" href="{{pathFor 'userFind' username= author}}">{{author}} </a>
                     <span>{{pluralize votes "Vote"}}</span>
                     <span style="font-size:12px">{{livestamp submitted}}</span>
-                    <!--{{#if ownComment}}-->
-                        <!--<a href="{{pathFor 'commentEdit'}}" class="discuss btn btn-default">Edit</a>-->
-                    <!--{{/if}}-->
-                </span>
             </p>
         </h4>
         <p>{{body}}</p>

@@ -25,7 +25,7 @@ Template.commentItemFind.helpers({
         }
     },
     //findPost: function(){
-    //    var postId = Comments.findOne({postId: this.postId});
+    //    var thisPost = Comments.findOne({postId: this.postId});
     //    return postId;
     //}
 });

@@ -1,5 +1,5 @@
 /* Boton JS subir*/
-#ir-arriba{
+#go-top{
     display:none; /*permite ocultar el boton al cargar la pagina*/
     position: fixed;
     padding:20px;
@@ -52,4 +52,7 @@ a #icono-header:focus{
 }
 .comments-find{
     padding-left: 0;
+}
+.findPost{
+    margin-bottom: 3em !important;
 }
