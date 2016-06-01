@@ -40,6 +40,7 @@ Template.changePassword.events({
                     return console.log(error.reason);
                 }
                 else {
+
                     Bert.alert({
                         title: "Password successfully changed",
                         message: "Please Log In",
@@ -55,6 +56,7 @@ Template.changePassword.events({
                     //    type: "success"
                     //});
                     Router.go("login");
+                    Meteor.logout();
                 }
             }, function (error) {
                 if (error) {
