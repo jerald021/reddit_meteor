@@ -18,7 +18,7 @@ Meteor.methods({
             return false;
         }
     },
-    updateProfile: function (newUsername, email) {
+    updateProfile: function (email) {
         //check(newUsername, String);
         check(email, String);
         var user = Meteor.user();

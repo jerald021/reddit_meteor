@@ -15,7 +15,8 @@ Template.userProfile.events({
         event.preventDefault();
         //var username = $('#username').val();
         var email = $('#email').val();
-        Meteor.call('updateProfile',username, email);
+        //Meteor.call('updateProfile',username, email);
+        Meteor.call('updateProfile', email);
 
         if(result){
             Router.go('home');
