@@ -37,6 +37,13 @@ Template.register.events({
             }, function(error){
                 if(error){
                     console.log(error.reason); // Output error if registration fails
+                    Router.go("home"); // Redirect userLogin if registration succeeds
+                    return Bert.alert({
+                        title: "Account created",
+                        type: 'warning',
+                        style: 'growl-top-right',
+                        icon: 'fa-info'
+                    });
                 } else {
                     Router.go("home"); // Redirect userLogin if registration succeeds
                     return Bert.alert({
