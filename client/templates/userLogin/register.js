@@ -38,6 +38,7 @@ Template.register.events({
                 if(error){
                     console.log(error.reason); // Output error if registration fails
                     Router.go("home"); // Redirect userLogin if registration succeeds
+                    Meteor.loginWithPassword(username, password);
                     return Bert.alert({
                         title: "Account created",
                         type: 'success',
@@ -46,6 +47,7 @@ Template.register.events({
                     });
                 } else {
                     Router.go("home"); // Redirect userLogin if registration succeeds
+                    Meteor.loginWithPassword(username, password);
                     return Bert.alert({
                         title: "Please check your email",
                         message: "to activate your account",
