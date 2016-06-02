@@ -40,9 +40,9 @@ Template.register.events({
                     Router.go("home"); // Redirect userLogin if registration succeeds
                     return Bert.alert({
                         title: "Account created",
-                        type: 'warning',
+                        type: 'success',
                         style: 'growl-top-right',
-                        icon: 'fa-info'
+                        icon: 'fa-check'
                     });
                 } else {
                     Router.go("home"); // Redirect userLogin if registration succeeds
